@@ -29,18 +29,17 @@ export default function Hero() {
     <section id="hero" className="relative h-screen w-full flex flex-col justify-center px-6 md:px-12 overflow-hidden">
       <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-offblack pointer-events-none">
         {hasMounted && !isSlowConnection ? (
-          <iframe 
-            src="https://www.youtube.com/embed/7Qj6Kz7YkJk?autoplay=1&mute=1&loop=1&playlist=7Qj6Kz7YkJk&controls=0&disablekb=1&modestbranding=1&rel=0&iv_load_policy=3&start=1" 
-            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.78vh] -translate-x-1/2 -translate-y-1/2 opacity-30 pointer-events-none border-none scale-[1.15]"
-            allow="autoplay; encrypted-media"
-            title="Background Video"
-          />
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
+          >
+            <source src="/video-project.mp4" type="video/mp4" />
+          </video>
         ) : (
-          <img 
-            src="https://img.youtube.com/vi/7Qj6Kz7YkJk/maxresdefault.jpg" 
-            alt="Hero Background"
-            className="absolute inset-0 w-full h-full object-cover opacity-30"
-          />
+          <div className="absolute inset-0 w-full h-full bg-offblack opacity-30" />
         )}
         {/* Overlay invisível que cobre o player inteiramente */}
         <div className="absolute inset-0 bg-transparent z-10 pointer-events-none" />
