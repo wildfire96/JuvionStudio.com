@@ -31,6 +31,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://api.fontshare.com" />
+        <link href="https://api.fontshare.com/v2/css?f[]=boska@700,900&f[]=satoshi@300,400,500&display=swap" rel="stylesheet" />
+      </head>
       <body className="antialiased font-body bg-background text-foreground selection:bg-silver selection:text-offblack" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <Providers>

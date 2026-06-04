@@ -8,41 +8,51 @@ export default function Contact() {
   const locale = useLocale();
   
   useEffect(() => {
-    (function (C: any, A: string, L: string) { 
-      let p = function (a: any, ar: any) { a.q.push(ar); }; 
-      let d = C.document; 
-      C.Cal = C.Cal || function () { 
-        let cal = C.Cal; let ar = arguments; 
-        if (!cal.loaded) { 
-          cal.ns = {}; cal.q = cal.q || []; 
-          d.head.appendChild(d.createElement("script")).src = A; 
-          cal.loaded = true; 
-        } 
-        if (ar[0] === L) { 
-          const api = function () { p(api, arguments); } as any; 
-          const namespace = ar[1]; api.q = api.q || []; 
-          if(typeof namespace === "string"){
-            cal.ns[namespace] = cal.ns[namespace] || api;
-            p(cal.ns[namespace], ar);
-            p(cal, ["initNamespace", namespace]);
-          } else p(cal, ar); return;
-        } 
-        p(cal, ar); 
-      }; 
-    })(window, "https://app.cal.com/embed/embed.js", "init");
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        (function (C: any, A: string, L: string) { 
+          let p = function (a: any, ar: any) { a.q.push(ar); }; 
+          let d = C.document; 
+          C.Cal = C.Cal || function () { 
+            let cal = C.Cal; let ar = arguments; 
+            if (!cal.loaded) { 
+              cal.ns = {}; cal.q = cal.q || []; 
+              d.head.appendChild(d.createElement("script")).src = A; 
+              cal.loaded = true; 
+            } 
+            if (ar[0] === L) { 
+              const api = function () { p(api, arguments); } as any; 
+              const namespace = ar[1]; api.q = api.q || []; 
+              if(typeof namespace === "string"){
+                cal.ns[namespace] = cal.ns[namespace] || api;
+                p(cal.ns[namespace], ar);
+                p(cal, ["initNamespace", namespace]);
+              } else p(cal, ar); return;
+            } 
+            p(cal, ar); 
+          }; 
+        })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    const Cal = (window as any).Cal;
-    const eventName = locale === 'pt' ? 'chat-rapido' : 'quick-chat';
+        const Cal = (window as any).Cal;
+        const eventName = locale === 'pt' ? 'chat-rapido' : 'quick-chat';
 
-    Cal("init", eventName, {origin:"https://app.cal.com"});
+        Cal("init", eventName, {origin:"https://app.cal.com"});
 
-    Cal.ns[eventName]("inline", {
-      elementOrSelector: `#my-cal-inline-${eventName}`,
-      config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
-      calLink: `joel-medina-de-freitas-junior-nzh8a0/${eventName}`,
-    });
+        Cal.ns[eventName]("inline", {
+          elementOrSelector: `#my-cal-inline-${eventName}`,
+          config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+          calLink: `joel-medina-de-freitas-junior-nzh8a0/${eventName}`,
+        });
 
-    Cal.ns[eventName]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        Cal.ns[eventName]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+        observer.disconnect();
+      }
+    }, { rootMargin: '300px' });
+
+    const el = document.getElementById('contato');
+    if (el) observer.observe(el);
+
+    return () => observer.disconnect();
   }, [locale]);
 
   const eventNameId = locale === 'pt' ? 'chat-rapido' : 'quick-chat';

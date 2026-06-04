@@ -18,6 +18,7 @@ export default function Hero() {
         conn.effectiveType === 'slow-2g' || 
         conn.effectiveType === '2g' || 
         conn.effectiveType === '3g' || 
+        conn.downlink < 10 ||
         conn.saveData
       ) {
         setIsSlowConnection(true);
@@ -39,6 +40,12 @@ export default function Hero() {
           >
             <source src="/video-project.mp4" type="video/mp4" />
           </video>
+        ) : hasMounted && isSlowConnection ? (
+          <div 
+            className="absolute inset-0 w-full h-full bg-cover bg-center opacity-30 pointer-events-none" 
+            style={{ backgroundImage: "url('/hero-poster.jpg')" }}
+            aria-hidden="true"
+          />
         ) : (
           <div className="absolute inset-0 w-full h-full bg-offblack opacity-30" />
         )}
