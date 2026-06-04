@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { SectionWrapper } from './SectionWrapper';
-import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Services() {
   const t = useTranslations('Navigation');
@@ -42,10 +41,14 @@ export default function Services() {
           return (
             <div 
               key={idx} 
-              className="group border-b border-silver-dark/20 py-6 md:py-8 flex flex-col hover:bg-silver/5 transition-colors cursor-pointer px-4 -mx-4"
-              onClick={() => setOpenIndex(isOpen ? null : idx)}
+              className="group border-b border-silver-dark/20 py-6 md:py-8 flex flex-col hover:bg-silver/5 transition-colors px-4 -mx-4"
             >
-              <div className="flex items-center justify-between">
+              <button 
+                className="w-full text-left flex items-center justify-between focus:outline-none rounded-sm"
+                onClick={() => setOpenIndex(isOpen ? null : idx)}
+                aria-expanded={isOpen}
+                aria-controls={`service-panel-${idx}`}
+              >
                 <div className="flex items-center gap-4 md:gap-8 w-full">
                   <span className="font-mono text-sm text-silver-dark group-hover:text-silver-muted">(00{idx + 1})</span>
                   <h3 className={`font-display transition-all duration-500 ${isOpen ? 'text-3xl md:text-5xl text-silver' : 'text-2xl md:text-4xl text-silver-muted group-hover:text-silver'}`}>
@@ -55,37 +58,32 @@ export default function Services() {
                 <div className="w-10 h-10 rounded-full border border-silver-dark/30 flex items-center justify-center shrink-0 transition-colors group-hover:border-silver-muted bg-offblack shadow-sm">
                   <span className="text-xl text-silver-muted font-light mb-0.5">{isOpen ? '−' : '+'}</span>
                 </div>
-              </div>
+              </button>
 
-              <AnimatePresence>
-                {isOpen && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                    className="overflow-hidden"
-                  >
-                    <div className="pt-8 pb-4 flex flex-col md:flex-row gap-8 items-start pl-0 md:pl-[4.5rem]">
-                      <div className="flex-1 max-w-2xl">
-                        <p className="text-lg text-silver-muted font-body font-light leading-relaxed">
-                          {service.description}
-                        </p>
-                      </div>
-                      <div className="flex-1 md:ml-auto md:max-w-xs">
-                        <h5 className="text-xs font-body font-bold uppercase tracking-widest text-silver-dark mb-4">Categorias</h5>
-                        <div className="flex flex-wrap gap-2">
-                          {service.tags.map(tag => (
-                            <span key={tag} className="px-4 py-2 rounded-full border border-silver-dark/20 text-xs font-body text-silver-muted bg-silver/5 hover:bg-silver/10 transition-colors">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
+              <div 
+                id={`service-panel-${idx}`}
+                className={`grid transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+              >
+                <div className="overflow-hidden">
+                  <div className="pt-8 pb-4 flex flex-col md:flex-row gap-8 items-start pl-0 md:pl-[4.5rem]">
+                    <div className="flex-1 max-w-2xl">
+                      <p className="text-lg text-silver-muted font-body font-light leading-relaxed">
+                        {service.description}
+                      </p>
+                    </div>
+                    <div className="flex-1 md:ml-auto md:max-w-xs">
+                      <h5 className="text-xs font-body font-bold uppercase tracking-widest text-silver-dark mb-4">Categorias</h5>
+                      <div className="flex flex-wrap gap-2">
+                        {service.tags.map(tag => (
+                          <span key={tag} className="px-4 py-2 rounded-full border border-silver-dark/20 text-xs font-body text-silver-muted bg-silver/5 hover:bg-silver/10 transition-colors">
+                            {tag}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                  </div>
+                </div>
+              </div>
             </div>
           );
         })}

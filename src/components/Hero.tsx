@@ -34,6 +34,7 @@ export default function Hero() {
             muted 
             loop 
             playsInline
+            aria-hidden="true"
             className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none"
           >
             <source src="/video-project.mp4" type="video/mp4" />

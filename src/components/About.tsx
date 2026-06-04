@@ -22,7 +22,7 @@ export default function About() {
         <div className="w-full aspect-[4/5] bg-silver-dark/10 rounded-sm border border-silver-dark/20 relative overflow-hidden group">
           <Image 
             src="/profile.jpeg"
-            alt="Joel Medina"
+            alt="Retrato de Joel Medina, Engenheiro Front-End e Web Designer"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover mix-blend-luminosity opacity-80 group-hover:mix-blend-normal group-hover:opacity-100 transition-all duration-700 ease-out scale-105 group-hover:scale-100"
