@@ -1,0 +1,12 @@
+{
+  "Index": {
+    "title": "Joel Medina",
+    "subtitle": "Front-End Engineer"
+  },
+  "Navigation": {
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}

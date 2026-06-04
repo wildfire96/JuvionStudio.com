@@ -1,0 +1,47 @@
+@import url('https://api.fontshare.com/v2/css?f[]=boska@700,900&f[]=satoshi@300,400,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Cores Base Juvion Studio */
+  --color-offblack: #111111;
+  --color-offblack-muted: #1A1A1A;
+  --color-silver: #E8E8E8;
+  --color-silver-muted: #A3A3A3;
+  --color-silver-dark: #737373;
+
+  /* Fontes (Serão definidas via Next.js Font) */
+  --font-display: 'Boska', serif;
+  --font-body: 'Satoshi', sans-serif;
+}
+
+:root {
+  --background: var(--color-offblack);
+  --foreground: var(--color-silver);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ocultar barra de rolagem nativa, pois teremos Lenis */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Utilitários Extras */
+.text-balance {
+  text-wrap: balance;
+}
+
+.fade-bottom {
+  -webkit-mask-image: linear-gradient(to top, black 0%, black 20%, transparent 100%);
+  mask-image: linear-gradient(to top, black 0%, black 20%, transparent 100%);
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
