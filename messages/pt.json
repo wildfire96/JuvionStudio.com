@@ -47,6 +47,41 @@
       "contribution4": "Redução do tempo de carregamento da interface em 40% através de divisão de código (code-splitting).",
       "impact": "Ganhei expertise profunda em acessibilidade digital prática (Directives WAI-ARIA, testes de leitor de tela), otimização de fluxos de agendamento e design de sistemas focados em diversidade e inclusão."
     }
+  },
+  "About": {
+    "title": "Sobre",
+    "description1": "Sou Joel Medina, Engenheiro Front-End e Web Designer. Trabalho de forma altamente otimizada, assistida por Inteligência Artificial, o que me permite entregar projetos de alta complexidade até 50% mais rápido — com prazos de entrega de menos de uma semana para projetos prontos para produção.",
+    "description2": "Como prova dessa velocidade e precisão: o desenvolvimento da plataforma JuvionHub foi concluído em apenas 3 dias, este portfólio interativo JuvionStudio em 2 dias e o rebranding técnico da Lacrei Saúde em apenas 1 dia.",
+    "description3": "Utilizo Next.js, React, TypeScript e Tailwind CSS orquestrados com bases de dados no Supabase e deploys na Vercel para entregar produtos digitais impecáveis. Mais do que escrever código, eu construo experiências web onde cada pixel tem um propósito exato e cada animação carrega uma intenção clara.",
+    "imageAlt": "Retrato de Joel Medina, Engenheiro Front-End e Web Designer"
+  },
+  "Services": {
+    "title": "Serviços",
+    "categories": "Categorias",
+    "item1": {
+      "title": "Engenharia Front-End",
+      "description": "Desenvolvimento de interfaces robustas e escaláveis utilizando as melhores práticas do ecossistema React. Foco em componentização, estado global e arquitetura limpa.",
+      "tags": "React, Next.js, TypeScript, Tailwind CSS"
+    },
+    "item2": {
+      "title": "Web Design Premium",
+      "description": "Criação de identidades visuais imersivas e interfaces brutais. Cada decisão de design é tomada com o objetivo de gerar impacto emocional e clareza de uso.",
+      "tags": "UI/UX, Figma, Brutalismo, Tipografia"
+    },
+    "item3": {
+      "title": "Animações & Micro-interações",
+      "description": "Movimentos coreografados que dão vida à interface. Utilização avançada de bibliotecas de animação para garantir 60fps constantes sem gargalos de performance.",
+      "tags": "Framer Motion, GSAP, Lenis, CSS Animations"
+    },
+    "item4": {
+      "title": "Performance & SEO",
+      "description": "Auditoria e refatoração de bases de código para atingir o máximo em Core Web Vitals. Imagens otimizadas, lazy loading e redução agressiva de bundle size.",
+      "tags": "Lighthouse, SEO, Web Vitals, Otimização"
+    }
+  },
+  "Contact": {
+    "title": "Contato",
+    "subtitle": "Pronto para elevar a presença digital da sua marca ao nível do design de elite? Agende uma conversa e vamos construir o futuro."
   }
 }
 

@@ -4,7 +4,7 @@ import { SectionWrapper } from './SectionWrapper';
 import { useEffect } from 'react';
 
 export default function Contact() {
-  const t = useTranslations('Navigation');
+  const t = useTranslations('Contact');
   const locale = useLocale();
   
   useEffect(() => {
@@ -60,11 +60,10 @@ export default function Contact() {
   return (
     <SectionWrapper id="contato" className="border-t border-silver-dark/20 text-center items-center">
       <h2 className="text-4xl md:text-7xl font-display font-bold text-silver mb-8 uppercase tracking-tighter">
-        {t('contact')}
+        {t('title')}
       </h2>
       <p className="text-xl text-silver-muted font-body font-light mb-12 max-w-2xl mx-auto">
-        Pronto para elevar a presença digital da sua marca ao nível do design de elite? 
-        Agende uma conversa e vamos construir o futuro.
+        {t('subtitle')}
       </p>
       
       {/* Cal.com Embed Container */}

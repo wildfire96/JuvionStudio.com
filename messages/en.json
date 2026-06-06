@@ -47,6 +47,41 @@
       "contribution4": "Reduced page load time by 40% through aggressive code-splitting.",
       "impact": "Gained deep expertise in practical digital accessibility (WAI-ARIA, screen reader testing), scheduling flows, and designing inclusive systems."
     }
+  },
+  "About": {
+    "title": "About",
+    "description1": "I am Joel Medina, Front-End Engineer and Web Designer. I work in a highly optimized, AI-assisted way, allowing me to deliver high-complexity projects up to 50% faster — with production-ready delivery timelines in less than a week.",
+    "description2": "As proof of this speed and precision: the JuvionHub platform development was completed in just 3 days, this interactive JuvionStudio portfolio in 2 days, and the technical rebranding of Lacrei Saúde in only 1 day.",
+    "description3": "I use Next.js, React, TypeScript, and Tailwind CSS orchestrated with Supabase databases and Vercel deployments to deliver flawless digital products. More than writing code, I build web experiences where every pixel has an exact purpose and every animation carries a clear intent.",
+    "imageAlt": "Portrait of Joel Medina, Front-End Engineer and Web Designer"
+  },
+  "Services": {
+    "title": "Services",
+    "categories": "Categories",
+    "item1": {
+      "title": "Front-End Engineering",
+      "description": "Development of robust and scalable interfaces using the best practices of the React ecosystem. Focus on componentization, global state, and clean architecture.",
+      "tags": "React, Next.js, TypeScript, Tailwind CSS"
+    },
+    "item2": {
+      "title": "Premium Web Design",
+      "description": "Creation of immersive visual identities and brutalist interfaces. Every design decision is made to generate emotional impact and clarity of use.",
+      "tags": "UI/UX, Figma, Brutalism, Typography"
+    },
+    "item3": {
+      "title": "Animations & Micro-interactions",
+      "description": "Choreographed movements that bring the interface to life. Advanced use of animation libraries to ensure constant 60fps without performance bottlenecks.",
+      "tags": "Framer Motion, GSAP, Lenis, CSS Animations"
+    },
+    "item4": {
+      "title": "Performance & SEO",
+      "description": "Auditing and refactoring codebases to achieve the maximum in Core Web Vitals. Optimized images, lazy loading, and aggressive bundle size reduction.",
+      "tags": "Lighthouse, SEO, Web Vitals, Optimization"
+    }
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Ready to elevate your brand's digital presence to elite design standards? Schedule a chat and let's build the future."
   }
 }
 
