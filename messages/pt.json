@@ -8,5 +8,45 @@
     "services": "Serviços",
     "projects": "Projetos",
     "contact": "Contato"
+  },
+  "Projects": {
+    "title": "Projetos Selecionados",
+    "subtitle": "Trabalhos",
+    "contributionsTitle": "Minhas Contribuições",
+    "impactTitle": "Impacto no Conhecimento",
+    "stackTitle": "Tecnologias",
+    "visitProject": "Ver Projeto",
+    "viewOnGithub": "Ver no GitHub",
+    "juvionhub": {
+      "title": "JuvionHub",
+      "category": "Micro-SaaS / LMS",
+      "description": "Plataforma SaaS compacta e de alto desempenho para venda e consumo de cursos online. Integra área de membros, reprodutor de vídeo otimizado e checkout integrado.",
+      "contribution1": "Arquitetura completa do front-end com Next.js (App Router) e React.",
+      "contribution2": "Área de membros ultra responsiva com navegação em alta performance.",
+      "contribution3": "Integração do player de vídeo personalizado com controle de progresso dinâmico.",
+      "contribution4": "Estruturação das tabelas de dados de progresso e usuários no Supabase.",
+      "impact": "Aprofundei em estratégias de cacheamento de dados no lado do servidor com Next.js, modelagem de banco relacional seguro no Supabase e otimização de renderização de vídeo para dispositivos móveis."
+    },
+    "juvionstudio": {
+      "title": "JuvionStudio.com",
+      "category": "Landing Page Premium / Portfolio",
+      "description": "O próprio site que você está navegando agora. Uma vitrine técnica que traduz design conceitual em engenharia front-end limpa, performática e interativa.",
+      "contribution1": "Design visual conceitual com foco em tipografia editorial e estética brutalista.",
+      "contribution2": "Desenvolvimento completo utilizando Tailwind CSS v4 e Next.js.",
+      "contribution3": "Interações fluidas com Framer Motion e rolagem inercial suave via Lenis.",
+      "contribution4": "Configuração do sistema multi-idiomas nativo e SEO estruturado de alta performance.",
+      "impact": "Consolidei o uso do Tailwind v4 (CSS puro + diretivas modernas) e a sincronia perfeita de animações complexas baseadas na rolagem física do usuário."
+    },
+    "lacrei_saude": {
+      "title": "Rebranding Lacrei Saúde",
+      "category": "UI/UX / Healthcare platform",
+      "description": "Refatoração e redesenho visual completo da plataforma médica, priorizando acessibilidade de ponta (WCAG AA/AAA) e design system unificado para a comunidade LGBTQIA+.",
+      "contribution1": "Criação de novos padrões de componentes de UI totalmente acessíveis via teclado.",
+      "contribution2": "Revisão e refatoração do contraste de cores e legibilidade tipográfica sob diretrizes WCAG.",
+      "contribution3": "Desenvolvimento de fluxos complexos de agendamento de consultas médicas e filtros de especialistas.",
+      "contribution4": "Redução do tempo de carregamento da interface em 40% através de divisão de código (code-splitting).",
+      "impact": "Ganhei expertise profunda em acessibilidade digital prática (Directives WAI-ARIA, testes de leitor de tela), otimização de fluxos de agendamento e design de sistemas focados em diversidade e inclusão."
+    }
   }
 }
+

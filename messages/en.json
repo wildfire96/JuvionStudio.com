@@ -8,5 +8,45 @@
     "services": "Services",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "Projects": {
+    "title": "Selected Works",
+    "subtitle": "Archive",
+    "contributionsTitle": "My Contributions",
+    "impactTitle": "Knowledge Impact",
+    "stackTitle": "Technologies",
+    "visitProject": "Visit Project",
+    "viewOnGithub": "View on GitHub",
+    "juvionhub": {
+      "title": "JuvionHub",
+      "category": "Micro-SaaS / LMS",
+      "description": "A high-performance micro-SaaS platform for selling and consuming online courses. It features a member area, optimized video player, and integrated checkout.",
+      "contribution1": "Complete front-end architecture using Next.js (App Router) and React.",
+      "contribution2": "Ultra-responsive members area with high-performance navigation.",
+      "contribution3": "Integration of a custom video player with dynamic progress tracking.",
+      "contribution4": "Structured database tables for progress and users in Supabase.",
+      "impact": "Deepened my knowledge of server-side data caching strategies in Next.js, secure relational database modeling in Supabase, and mobile video rendering optimization."
+    },
+    "juvionstudio": {
+      "title": "JuvionStudio.com",
+      "category": "Premium Landing Page / Portfolio",
+      "description": "The very site you are browsing right now. A technical showcase translating conceptual design into clean, performant, and interactive front-end engineering.",
+      "contribution1": "Conceptual visual design focused on editorial typography and brutalist aesthetics.",
+      "contribution2": "Complete development utilizing Tailwind CSS v4 and Next.js.",
+      "contribution3": "Fluid interactions using Framer Motion and smooth inertial scrolling via Lenis.",
+      "contribution4": "Setup of the native multi-language system and high-performance structured SEO.",
+      "impact": "Consolidated the use of Tailwind v4 (pure CSS + modern directives) and the perfect synchronization of complex scroll-based animations."
+    },
+    "lacrei_saude": {
+      "title": "Lacrei Saúde Rebranding",
+      "category": "UI/UX / Healthcare Platform",
+      "description": "Complete refactoring and visual redesign of the medical platform, prioritizing state-of-the-art accessibility (WCAG AA/AAA) and a unified design system for the LGBTQIA+ community.",
+      "contribution1": "Created keyboard-accessible UI component patterns.",
+      "contribution2": "Reviewed and refactored color contrast and typographic legibility under WCAG guidelines.",
+      "contribution3": "Developed complex scheduling flows for medical appointments and specialist filters.",
+      "contribution4": "Reduced page load time by 40% through aggressive code-splitting.",
+      "impact": "Gained deep expertise in practical digital accessibility (WAI-ARIA, screen reader testing), scheduling flows, and designing inclusive systems."
+    }
   }
 }
+

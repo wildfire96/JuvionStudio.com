@@ -4,6 +4,7 @@ import Hero from '@/components/Hero';
 // Carregamento dinâmico e preguiçoso para as seções abaixo da dobra
 const About = dynamic(() => import('@/components/About'), { ssr: true });
 const Services = dynamic(() => import('@/components/Services'), { ssr: true });
+const Projects = dynamic(() => import('@/components/Projects'), { ssr: true });
 const Contact = dynamic(() => import('@/components/Contact'), { ssr: true });
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
+      <Projects />
       <Contact />
     </main>
   );
